@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hybrid Threat Detector</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="container">
+    <!-- Header -->
+    <header id="header">
+      <div class="logo">🛡</div>
+      <div class="title">Hybrid Threat Detector</div>
+      <div id="status-dot" class="dot dot-grey"></div>
+    </header>
+
+    <!-- Input Section (Default) -->
+    <main id="input-section" class="section">
+      <div class="input-group">
+        <label for="url-input">Enter URL to scan:</label>
+        <input type="text" id="url-input" placeholder="https://example.com" spellcheck="false">
+      </div>
+      <div class="button-row">
+        <button id="scan-btn" class="btn btn-primary">🔍 Scan URL</button>
+        <button id="cancel-input-btn" class="btn btn-secondary">Cancel</button>
+      </div>
+    </main>
+
+    <!-- Loading Section -->
+    <main id="loading-section" class="section hidden">
+      <div class="spinner-container">
+        <div class="spinner"></div>
+      </div>
+      <p id="loading-text">Analyzing target...</p>
+    </main>
+
+    <!-- Result Section -->
+    <main id="result-section" class="section hidden">
+      <div id="result-badge" class="badge">SAFE</div>
+      <div id="result-target" class="target-text"></div>
+      
+      <div class="score-container">
+        <div class="score-label">Risk Score: <span id="score-value">0</span>%</div>
+        <div class="score-bar-bg">
+          <div id="score-bar" class="score-bar" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <div id="result-explanation" class="explanation"></div>
+      
+      <div class="reasons-container">
+        <ul id="reasons-list"></ul>
+      </div>
+
+      <div id="vt-block" class="vt-block hidden">
+        <div class="vt-icon">VT</div>
+        <div id="vt-text">VirusTotal analysis complete.</div>
+      </div>
+
+      <div class="button-row action-buttons">
+        <button id="proceed-btn" class="btn btn-success">✓ Proceed anyway</button>
+        <button id="cancel-result-btn" class="btn btn-danger">✗ Cancel</button>
+      </div>
+    </main>
+
+    <!-- Footer Status -->
+    <footer id="footer">
+      <span id="backend-status-text">Checking backend status...</span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
