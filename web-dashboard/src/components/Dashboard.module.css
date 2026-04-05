@@ -1,0 +1,120 @@
+/* web-dashboard/src/components/Dashboard.module.css */
+.container {
+  margin-left: 260px;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--fg-primary);
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--fg-muted);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 24px;
+  border-radius: 12px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.cardLabel {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.cardValue {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--fg-primary);
+  font-family: var(--font-mono);
+}
+
+.scannerCard {
+  background: linear-gradient(145deg, #161b22 0%, #0d1117 100%);
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  margin-bottom: 48px;
+  box-shadow: var(--shadow);
+}
+
+.inputGroup {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.input {
+  flex: 1;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  padding: 16px 24px;
+  border-radius: 8px;
+  color: var(--fg-primary);
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-glow);
+}
+
+.primaryBtn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.primaryBtn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.primaryBtn:active {
+  transform: translateY(0);
+}
+
+.resultsArea {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  color: var(--fg-dim);
+}
